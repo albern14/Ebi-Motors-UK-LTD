@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ebi Motors Design System - Purple & White Theme */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    /* Professional purple from automotive branding */
+    --primary: 260 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 42 85% 52%;
+    --primary-dark: 260 70% 32%;
+
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 15% 20%;
+
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 260 50% 96%;
+    --accent-foreground: 260 70% 42%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 90%;
+    --ring: 260 70% 42%;
+
+    /* Professional gradient definitions */
+    --gradient-primary: linear-gradient(135deg, hsl(260 70% 42%), hsl(260 70% 52%));
+    --gradient-hero: linear-gradient(135deg, hsl(260 70% 32%) 0%, hsl(260 70% 42%) 50%, hsl(220 20% 30%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 15% 98%));
+    --gradient-elegant: linear-gradient(135deg, hsl(260 70% 42%), hsl(280 60% 50%));
+    
+    /* Professional shadow definitions */
+    --shadow-xs: 0 1px 2px hsl(220 15% 20% / 0.05);
+    --shadow-sm: 0 2px 8px hsl(220 15% 20% / 0.08);
+    --shadow-soft: 0 8px 24px hsl(260 70% 42% / 0.12);
+    --shadow-strong: 0 16px 48px hsl(260 70% 42% / 0.18);
+    --shadow-glow: 0 0 40px hsl(260 70% 52% / 0.25);
+    
+    /* Animation timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 260 20% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 260 20% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 260 20% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 260 85% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 42 85% 56%;
+    --primary-dark: 260 85% 55%;
+
+    --secondary: 260 15% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 260 15% 18%;
+    --muted-foreground: 260 8% 65%;
+
+    --accent: 260 20% 20%;
+    --accent-foreground: 260 85% 65%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 20% 20%;
+    --input: 260 20% 20%;
+    --ring: 260 85% 65%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-elegant {
+    background: var(--gradient-elegant);
+  }
+  
+  .shadow-xs {
+    box-shadow: var(--shadow-xs);
+  }
+  
+  .shadow-sm {
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Enhanced scroll animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  .scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-40px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .scroll-reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  
+  .scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(40px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .scroll-reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
