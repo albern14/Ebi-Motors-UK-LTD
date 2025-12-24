@@ -7,7 +7,6 @@ import customerService from "@/assets/ebi-garage-exterior.jpg";
 export const About = () => {
   const stats = [
     { number: "10+", label: "Years Experience" },
-    { number: "5000+", label: "MOTs Completed" },
     { number: "100%", label: "DVSA Approved" },
     { number: "4.9★", label: "Customer Rating" }
   ];
